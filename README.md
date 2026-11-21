@@ -1,14 +1,15 @@
 # A Thousand Sails · website
 
-The public website of **A Thousand Sails / 万里千帆** (Android, `com.mz.wlqf`): the home page and
-the pages Google Play asks for. It is in English, 简体中文 and 日本語.
+The public website of **A Thousand Sails / 万里千帆** (Android and iOS, `com.mz.wlqf`): the home
+page and the pages Google Play and the App Store ask for. It is in English, 简体中文 and 日本語.
 
-| Page | English | Used in Play Console for |
-| --- | --- | --- |
-| Home | `/` | Website, store listing |
-| Privacy policy | `/privacy.html` | App content › Privacy policy; store listing |
-| Terms of service | `/terms.html` | (linked from the home page) |
-| Delete your data | `/delete-data.html` | Data safety › data deletion |
+| Page | English | Used in Play Console for | Used in App Store Connect for |
+| --- | --- | --- | --- |
+| Home | `/` | Website, store listing | Marketing URL (optional) |
+| Support | `/support.html` | (in the site's menu) | Support URL |
+| Privacy policy | `/privacy.html` | App content › Privacy policy; store listing | App Privacy › Privacy Policy URL |
+| Terms of service | `/terms.html` | (linked from the home page) | (linked from the home page) |
+| Delete your data | `/delete-data.html` | Data safety › data deletion | |
 
 The Chinese pages are under `/zh/` and the Japanese ones under `/ja/`.
 
@@ -21,7 +22,8 @@ python build.py
 ```
 
 * `src/site.json` holds the shared settings: contact email, developer name, site address, the
-  policies' "last updated" date and the Play link.
+  policies' "last updated" date and the Play link. There is no App Store link yet; the home
+  page's button says "coming soon" for both stores.
 * `src/i18n.json` holds the menu words of each language.
 * `src/<lang>/<page>.html` holds a page's text: a front block (`title`, `description`), then the
   body. `{{name}}` is replaced from the two JSON files.

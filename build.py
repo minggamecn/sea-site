@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'docs'
-PAGES = ['index', 'privacy', 'terms', 'delete-data']
+PAGES = ['index', 'support', 'privacy', 'terms', 'delete-data']
 
 
 def front(text: str, path: Path) -> tuple[dict, str]:
